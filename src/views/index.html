@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Electron JSON CRUD</title>
+  <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+
+        <h1>Gerenciamento de Registros</h1>
+        
+        <form id="data-form" class="form">
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Nome</span>
+                <input type="text" id="name" class="form-control" placeholder="Nome" aria-label="Nome" aria-describedby="basic-addon1" required>
+            </div>
+            <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">Data de nascimento</span>
+                <input class="form-control" type="date" id="dob" placeholder="Data de Nascimento" required>
+            </div>
+            <button class="btn btn-success" type="submit">Adicionar</button>
+        </form>
+        
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Data de Nascimento</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="data-table"></tbody>
+        </table>
+        
+    </div>
+    <script src="renderer.js"></script>
+    <script src="../public/js/bootstrap.min.js"></script>
+</body>
+</html>

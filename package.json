@@ -1,0 +1,13 @@
+{
+  "name": "lembrete-aniversario",
+  "version": "1.0.0",
+  "description": "Lembrete de aniversario",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^33.2.0"
+  }
+}
