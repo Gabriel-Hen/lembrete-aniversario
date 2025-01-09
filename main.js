@@ -52,3 +52,13 @@ ipcMain.handle('add-data', async (event, newData) => {
     return false;
   }
 });
+
+ipcMain.handle('overwrite-data', async (event, newData) => {
+  try {
+    fs.writeFileSync(dataFilePath, JSON.stringify(newData, null, 2));
+    return true;
+  } catch (err) {
+    console.error('Erro ao salvar os dados:', err);
+    return false;
+  }
+})
