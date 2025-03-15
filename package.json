@@ -10,20 +10,28 @@
     "dist": "electron-builder"
   },
   "build": {
+    "asar": false,
     "appId": "com.lembrete.aniversario",
     "productName": "Lembrete Aniversario",
     "mac": {
       "category": "public.app-category.utilities"
     },
     "win": {
-      "target": "nsis"
+      "target": "nsis",
+       "artifactName": "${productName}-${version}-setup.exe"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": false,
+      "createStartMenuShortcut": false
     },
     "linux": {
       "target": "AppImage"
     }
   },
   "devDependencies": {
-    "electron": "^33.2.0",
+    "electron": "22",
     "electron-builder": "^25.1.8"
   }
 }
